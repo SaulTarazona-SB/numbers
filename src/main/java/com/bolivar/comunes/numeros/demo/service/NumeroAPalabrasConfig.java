@@ -18,7 +18,7 @@ public class NumeroAPalabrasConfig {
 
 
     @Bean
-    public NumeroAPalabrasService NumeroAPalabrasService (Jaxb2Marshaller marshaller) {
+    public NumeroAPalabrasService numeroAPalabrasService (Jaxb2Marshaller marshaller) {
         NumeroAPalabrasService client = new NumeroAPalabrasService();
         client.setDefaultUri("https://www.dataaccess.com/webservicesserver");
         client.setMarshaller(marshaller);

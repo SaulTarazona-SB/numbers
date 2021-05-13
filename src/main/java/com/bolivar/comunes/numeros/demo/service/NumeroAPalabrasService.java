@@ -5,7 +5,6 @@ import com.bolivar.comunes.numeros.consumingwebservice.wsdl.NumberToWordsRespons
 import com.bolivar.comunes.numeros.demo.models.ObtenernumeroenpalabrasResponse;
 
 import org.springframework.context.annotation.Primary;
-import org.springframework.stereotype.Service;
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
 
 import java.math.BigInteger;
@@ -22,8 +21,6 @@ public class NumeroAPalabrasService extends WebServiceGatewaySupport {
         numberto.setUbiNum(number);
 
         NumberToWordsResponse responseWSDL = (NumberToWordsResponse) getWebServiceTemplate().marshalSendAndReceive(endpoint, numberto);
-
-        //responseWSDL.setNumberToWordsResult(numberto.getUbiNum().toString());
 
         response.setResponse(responseWSDL.getNumberToWordsResult());
 
